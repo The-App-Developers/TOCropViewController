@@ -557,7 +557,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 #pragma mark - Aspect Ratio Handling -
 - (void)showAspectRatioDialog
 {
-    if (self.cropView.aspectRatio.width == 4.0f && self.cropView.aspectRatio.height == 6.0f) {
+    if (self.cropView.aspectRatio.width < self.cropView.aspectRatio.height) {
         CGSize aspectRatio = CGSizeMake(6.0f, 4.0f);
         [self.cropView setAspectRatio:aspectRatio animated:true];
     } else {
